@@ -48,9 +48,10 @@ class AppColors {
   static const Color iconColor = Color(0xFF2D8F95);
   static const Color cThirdColor = Color(0xFFF6F6F6);
   static const Color dThirdColor = Color(0xFF757575);
-  static const Color eThirdColor =Color(0xFF0081A7);
-  static const Color fThirdColor =Color(0xFF00AFB9);
+  static const Color eThirdColor = Color(0xFF0081A7);
+  static const Color fThirdColor = Color(0xFF00AFB9);
   static const Color gThirdColor = Color(0xFF66CFD5);
+  static const Color hThirdColor = Color(0xFF757B7C);
 
   static const Color heroBlueGradientFirstColor = Color(0xFF0981a7);
   static const Color heroBlueGradientSecondColor = Color(0xFF044F67);

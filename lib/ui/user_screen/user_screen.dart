@@ -16,13 +16,12 @@ class UserScreen extends StatelessWidget {
   UserScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 225.h,
-            padding: EdgeInsets.only(top: 43.h),
-            child: Column(
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            //padding: EdgeInsets.only(top: 43.h),
+            Column(
               children: [
                 SvgPicture.asset(AppImages.imgNav),
                 Padding(
@@ -41,33 +40,43 @@ class UserScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 30.w),
                   child: SizedBox(
                     height: 27.h,
-                    child:  ListView.builder(
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       itemCount: Constants.contentList.length,
-                      itemBuilder: (context,index) {
-                        return CardFilter(title: Constants.contentList[index].title, color: Constants.contentList[index].color,);
+                      itemBuilder: (context, index) {
+                        return CardFilter(
+                          title: Constants.contentList[index].title,
+                          color: Constants.contentList[index].color,
+                        );
                       },
-                    )
+                    ),
                   ),
                 ),
               ],
             ),
-          ),
-          SizedBox(height: 50.h,),
-          ListView.builder(
-            //scrollDirection: Axis.vertical,
-            physics: const ScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: Constants.contentCard.length,
-            itemBuilder: (context, index) {
-              return CardDesign(
-                  title: Constants.contentCard[index].title,
-                  name: Constants.contentCard[index].name,
-                  image: Constants.contentCard[index].image);
-            },
-          ),
-        ],
+
+            Expanded(
+              child: Container(
+                child: ListView.builder(
+                  padding: EdgeInsets.only(top: 50.h),
+                  shrinkWrap: true,
+                  itemCount: Constants.contentCard.length,
+                  itemBuilder: (context, index) {
+                    return CardDesign(
+                      title: Constants.contentCard[index].title,
+                      name: Constants.contentCard[index].name,
+                      image: Constants.contentCard[index].image,
+                      pushScreen: Constants.contentCard[index].pushScreen,
+                    );
+                  },
+                ),
+                margin: EdgeInsets.only(top: 43.h),
+                color: AppColors.fThirdColor,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
