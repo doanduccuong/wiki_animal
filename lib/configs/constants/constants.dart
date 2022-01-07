@@ -11,13 +11,10 @@ class Constants {
   static const String userScreen = "user_screen";
   static const String detailScreen = "/deail_screen1";
   static List<CardFilter> contentList = [
-    CardFilter(
-      title: 'Popular',
-      color: AppColors.eThirdColor,
-    ),
-    CardFilter(title: 'Mammalians', color: AppColors.wPrimaryColor),
-    CardFilter(title: 'Amphbians', color: AppColors.wPrimaryColor),
-    CardFilter(title: 'Birds', color: AppColors.wPrimaryColor),
+    CardFilter(title: 'Popular'),
+    CardFilter(title: 'Mammalians'),
+    CardFilter(title: 'Amphbians'),
+    CardFilter(title: 'Birds'),
   ];
   static List<CardDesign> contentCard = [
     CardDesign(
