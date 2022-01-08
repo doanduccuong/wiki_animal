@@ -1,19 +1,15 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/src/extension_instance.dart';
+
 import 'package:wiki_animal/configs/colors.dart';
 import 'package:wiki_animal/configs/constants/constants.dart';
 import 'package:wiki_animal/configs/images.dart';
-import 'package:wiki_animal/controller/card_filter_controller.dart';
+
 import 'package:wiki_animal/model/card_design/card_design.dart';
-import 'package:wiki_animal/model/card_filter/card_filter.dart';
+
 import 'package:wiki_animal/model/card_filter/task_bar_builder.dart';
 import 'package:wiki_animal/ui/components/text/text_bold.dart';
-import 'package:wiki_animal/ui/components/text/text_normal.dart';
 
 class UserScreen extends StatelessWidget {
   UserScreen({Key? key}) : super(key: key);
@@ -77,8 +73,6 @@ class UserScreen extends StatelessWidget {
     );
   }
 }
-
-
 
 // CardFilter(
 // title: Constants.contentList[index].title,
